@@ -1,22 +1,32 @@
+// Cambios en la selección de elementos del DOM
 const baseEndpoint = 'https://api.github.com';
 const usersEndpoint = `${baseEndpoint}/users`;
-const $n = document.querySelector('name');
-const $b = document.querySelector('#blog');
-const $l = document.querySelector('.location');
+const $name = document.querySelector('.name'); // Se cambió el selector a '.name'
+const $blog = document.querySelector('#blog');
+const $location = document.querySelector('.location');
 
-function displayUser(username) {
-  $n.textContent = 'cargando...';
-  const response = await fetch(`${usersEndpoint}/${username}`);
-  console.log(data);
-  $n.textContent = '${data.name}';
-  $b.textContent = '${data.blog}';
-  $l.textContent = '${data.location}';
+// Función para mostrar información del usuario
+async function displayUser(username) {
+  try {
+    $name.textContent = 'cargando...';
+    const response = await fetch(`${usersEndpoint}/${username}`);
+    const data = await response.json();
+
+    // Checar si name, blog y location son no nulos
+    $name.textContent = data.name || 'Nombre no disponible';
+    $blog.textContent = data.blog || 'Blog no disponible';
+    $location.textContent = data.location || 'Location no disponible';
+  } catch (error) {
+    handleError(error);
+  }
 }
 
-function handleError(err) {
+// Función para manejar errores
+function handleError(error) {
   console.log('OH NO!');
-  console.log(err);
-  n.textContent = `Algo salió mal: ${err}`
+  console.log(error);
+  $name.textContent = `Algo salió mal: ${error}`;
 }
 
+// Llamada de la función con el nombre de usuario
 displayUser('stolinski').catch(handleError);
