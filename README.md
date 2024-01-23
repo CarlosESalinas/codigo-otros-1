@@ -19,3 +19,8 @@
 - Se actualizó el código que establece el contenido de `$name`, `$blog` y `$location` para mostrar mensajes predeterminados en caso de datos no disponibles.
 
 Estos cambios buscan corregir errores y mejorar la legibilidad y mantenimiento del código en el archivo JavaScript.
+
+## Cambios realizados en el archivo .html 
+
+- Se actualizaron los cambios en las rutas del los archivos index.html y app.js 
+- Se agregó una etiqueta `<p>` con el `id` blog.  
