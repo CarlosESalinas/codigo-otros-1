@@ -27,6 +27,11 @@ Estos cambios buscan corregir errores y mejorar la legibilidad y mantenimiento d
 - Se actualizaron los cambios en las rutas del los archivos index.html y app.js 
 - Se agregó una etiqueta `<p>` con el `id` blog.  
 
+### Resultado de las modificaciones 
+
+![Resultado_codigo_otros_1](./assets/imagenes/resultado1.png)
+
+
 --- 
 
 # Cambios en el codigo-otros-2
@@ -69,3 +74,7 @@ Estos cambios buscan corregir errores y mejorar la legibilidad y mantenimiento d
 ### Contenedor de Lista de Invitados:
 
 - **Versión sin Errores**: Se agregó un contenedor con el ID `lista-de-invitados`para mostrar la lista de invitados.
+
+### Resultado de las modificaciones 
+
+![Resultado_codigo_otros_1](./assets/imagenes/resultado2.png)
